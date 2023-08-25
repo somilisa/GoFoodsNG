@@ -1,12 +1,9 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import bg from '../Assets/about-hero-image.png';
-import {
-  BsChevronRight,
-  BsChevronLeft,
-} from 'react-icons/bs';
-import {FaQuoteLeft,
-  FaQuoteRight} from 'react-icons/fa'
+// import { BsChevronRight, BsChevronLeft } from 'react-icons/bs';
+// import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
+import Slider from '../components/Slider';
 
 const About = () => {
   return (
@@ -22,13 +19,22 @@ lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent ele
 vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim 
 lobortis scelerisque fermentum dui faucibus in ornare quam viverra'
       />
-      <section className='slider-section'>
-        <div class="slider">
+      <Slider/>
+      {/* <section className='slider-section'>
+        <div className='slider'>
           <article>
+            
+            <p className='slider-description'>
             <FaQuoteLeft />
-            <p></p>
-            <p></p>
-            <FaQuoteRight />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+              aliquam, purus sit amet luctus venenatis, lectus magna fringilla
+              urna, porttitor rhoncus dolor purus non enim praesent elementum
+              facilisis leo
+              <FaQuoteRight />
+            </p>
+            <hr />
+            <p className='slider-title'>Alan Michael</p>
+            
           </article>
           <button className='prev'>
             <BsChevronLeft />
@@ -37,7 +43,7 @@ lobortis scelerisque fermentum dui faucibus in ornare quam viverra'
             <BsChevronRight />
           </button>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 };
