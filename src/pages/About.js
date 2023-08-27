@@ -8,9 +8,9 @@ import Slider from '../components/Slider';
 const About = () => {
   return (
     <main>
-      <div>
+      {/* <div>
         <h2>about page</h2>
-      </div>
+      </div> */}
       <Hero
         imgUrl={bg}
         title='GoFoodsNG'
@@ -19,7 +19,7 @@ lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent ele
 vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim 
 lobortis scelerisque fermentum dui faucibus in ornare quam viverra'
       />
-      <Slider/>
+      <Slider />
       {/* <section className='slider-section'>
         <div className='slider'>
           <article>

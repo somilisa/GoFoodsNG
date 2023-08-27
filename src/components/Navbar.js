@@ -31,12 +31,12 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink
+            {/* <NavLink
               to='/cocktail:id'
               className={({ isActive }) => (isActive ? 'active' : 'link')}
             >
               Products
-            </NavLink>
+            </NavLink> */}
           </li>
         </ul>
       </div>

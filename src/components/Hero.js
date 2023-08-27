@@ -9,9 +9,9 @@ const Hero = ({imgUrl, title,description}:HeroBannerProps) => {
   return (
     <section>
       <div className='hero'>
-        <div className='hero-banner'>
+        {/* <div className='hero-banner'>
           <img src={imgUrl} alt='hero-banner'/>
-        </div>
+        </div> */}
         <div className="hero-text">
           <h3>{title}</h3>
           <p>

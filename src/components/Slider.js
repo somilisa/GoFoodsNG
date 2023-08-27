@@ -19,12 +19,12 @@ const Slider = (props: Props) => {
     }
   }, [index, people]);
 
-  useEffect(() => {
-    let slider = setInterval(() => {
-      setIndex(index + 1);
-    }, 3000);
-    return () => clearInterval(slider);
-  }, [index]);
+  // useEffect(() => {
+  //   let slider = setInterval(() => {
+  //     setIndex(index + 1);
+  //   }, 3000);
+  //   return () => clearInterval(slider);
+  // }, [index]);
 
   return (
     <section className='slider-section'>
@@ -46,11 +46,16 @@ const Slider = (props: Props) => {
           }
           return (
             <article className={position} key={id}>
-              <p className='slider-quote'>
-                {' '}
+              <div className='quote'>
                 <FaQuoteLeft className='quote-icon' />
-                {quote} <FaQuoteRight className='quote-icon' />
-              </p>
+                <p className='slider-quote'>
+                  {' '}
+                
+                  {quote}
+                </p>
+                <FaQuoteRight className='quote-icon' />
+              </div>
+              <hr></hr>
               <p className='slider-title'>{name}</p>
             </article>
           );
