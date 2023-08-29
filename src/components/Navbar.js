@@ -5,7 +5,7 @@ import GoFoodsNG from '../GoFoodsNG.svg';
 const Navbar = () => {
   return (
     <nav className='navbar'>
-      <div class='nav-center'>
+      <div className='nav-center'>
         <NavLink
           to='/'
           className={({ isActive }) => (isActive ? 'active' : 'link')}

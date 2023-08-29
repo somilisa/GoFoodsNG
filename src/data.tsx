@@ -16,5 +16,12 @@ const data = [
   }
 ]
 
-export {data};
+const cards = [
+  {
+    id: 1,
+    imgUrl: '../Assets/Rectangle 18.png'
+  }
+]
+
+export {data,cards};
 

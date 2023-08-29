@@ -312,7 +312,7 @@ Slider
   overflow: hidden;
 }
 
-article {
+.slide {
   position: absolute;
   top: 0;
   left: 0;
@@ -439,6 +439,30 @@ Contact Cards
   height: 3em;
   width: 3em;
   fill: #BA2E36;
+}
+
+/* 
+====== 
+Groups Card
+======
+*/
+
+.group-cards {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: var(--smallWidth);
+  max-width: var(--fullWidth);
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 240px;
+  width: 100%;
+  padding: 30px;
 }
 
 /* 
