@@ -10,7 +10,6 @@ import Error from './pages/Error';
 // import components
 import Navbar from './components/Navbar';
 function App() {
-  console.log(window.innerHeight);
   return (
     <BrowserRouter>
       <Routes>
@@ -18,7 +17,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path='about' element={<About />} />
           <Route path='contact' element={<Contact />} />
-          <Route path='cocktail:id' element={<SingleCocktail />} />
+          <Route path='cocktail/:id' element={<SingleCocktail />} />
           <Route path='*' element={<Error />} />
         </Route>
       </Routes>
