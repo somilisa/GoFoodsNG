@@ -23,7 +23,7 @@ const Footer = () => {
             <FaInstagram color='white' className='icons' />
           </a>
           <a href='https://www.facebook.com/'>
-            <FaFacebookF color='white' className='icons'/>
+            <FaFacebookF color='white' className='icons' />
           </a>
         </div>
       </div>

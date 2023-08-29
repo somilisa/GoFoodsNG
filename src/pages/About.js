@@ -20,30 +20,7 @@ vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim
 lobortis scelerisque fermentum dui faucibus in ornare quam viverra'
       />
       <Slider />
-      {/* <section className='slider-section'>
-        <div className='slider'>
-          <article>
-            
-            <p className='slider-description'>
-            <FaQuoteLeft />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-              aliquam, purus sit amet luctus venenatis, lectus magna fringilla
-              urna, porttitor rhoncus dolor purus non enim praesent elementum
-              facilisis leo
-              <FaQuoteRight />
-            </p>
-            <hr />
-            <p className='slider-title'>Alan Michael</p>
-            
-          </article>
-          <button className='prev'>
-            <BsChevronLeft />
-          </button>
-          <button className='next'>
-            <BsChevronRight />
-          </button>
-        </div>
-      </section> */}
+      
     </main>
   );
 };

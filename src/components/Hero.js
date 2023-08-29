@@ -1,22 +1,22 @@
 import React from 'react';
 
-interface HeroBannerProps{
+interface HeroBannerProps {
   imgUrl: string;
   title: string;
-  description: string; 
+  description: string;
 }
-const Hero = ({imgUrl, title,description}:HeroBannerProps) => {
+const Hero = ({ imgUrl, title, description }: HeroBannerProps) => {
   return (
     <section>
-      <div className='hero'>
-        {/* <div className='hero-banner'>
-          <img src={imgUrl} alt='hero-banner'/>
-        </div> */}
-        <div className="hero-text">
+      <div
+        className='hero'
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(${imgUrl})`,
+        }}
+      >
+        <div className='hero-text'>
           <h3>{title}</h3>
-          <p>
-            {description}
-          </p>
+          <p>{description}</p>
         </div>
       </div>
     </section>

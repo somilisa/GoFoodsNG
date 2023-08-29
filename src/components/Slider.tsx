@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { BsChevronRight, BsChevronLeft } from 'react-icons/bs';
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
-import { data } from '../data.ts';
+import { data } from '../data';
 
-type Props = {};
-
-const Slider = (props: Props) => {
+const Slider = () => {
   const [people, setPeople] = useState(data);
   const [index, setIndex] = useState(0);
 
@@ -19,19 +17,16 @@ const Slider = (props: Props) => {
     }
   }, [index, people]);
 
-  // useEffect(() => {
-  //   let slider = setInterval(() => {
-  //     setIndex(index + 1);
-  //   }, 3000);
-  //   return () => clearInterval(slider);
-  // }, [index]);
+  useEffect(() => {
+    let slider = setInterval(() => {
+      setIndex(index + 1);
+    }, 3000);
+    return () => clearInterval(slider);
+  }, [index]);
 
   return (
     <section className='slider-section'>
-      <div
-        className='slider
-      '
-      >
+      <div className='slider'>
         {people.map((person, personIndex) => {
           const { id, quote, name } = person;
           let position = 'nextSlide';
@@ -48,11 +43,7 @@ const Slider = (props: Props) => {
             <article className={position} key={id}>
               <div className='quote'>
                 <FaQuoteLeft className='quote-icon' />
-                <p className='slider-quote'>
-                  {' '}
-                
-                  {quote}
-                </p>
+                <p className='slider-quote'> {quote}</p>
                 <FaQuoteRight className='quote-icon' />
               </div>
               <hr></hr>
