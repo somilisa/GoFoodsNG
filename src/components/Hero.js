@@ -1,11 +1,14 @@
 import React from 'react';
+import SearchForm from '../components/SearchForm';
+
 
 interface HeroBannerProps {
   imgUrl: string;
   title: string;
   description: string;
+  home:Boolean;
 }
-const Hero = ({ imgUrl, title, description }: HeroBannerProps) => {
+const Hero = ({ imgUrl, title, description, home }: HeroBannerProps) => {
   return (
     <section>
       <div
@@ -17,6 +20,7 @@ const Hero = ({ imgUrl, title, description }: HeroBannerProps) => {
         <div className='hero-text'>
           <h3>{title}</h3>
           <p>{description}</p>
+          {home && <SearchForm />}
         </div>
       </div>
     </section>

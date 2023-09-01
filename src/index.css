@@ -589,6 +589,47 @@ Form
   padding-bottom: 0;
 }
 
+.search-icon {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+form {
+  display: flex;
+  gap: 24px;
+}
+
+.search-btn {
+  max-width: 136px;
+  width: 100%;
+  border-radius: 6px;
+  border: transparent;
+  background: #BA2E36;
+  padding: 0 5px;
+}
+
+.form-control {
+  max-width: 240px;
+  width: 100%;
+  align-items: center;
+  border: none;
+  border-color: transparent;
+  background: var(--mainBackground);
+  border-radius: var(--mainBorderRadius);
+  font-size: 1.2rem;
+}
+
+.form-control button {
+  background-color: transparent;
+  border: none;
+  padding: 0 5px;
+}
+
+.form-control:first-child {
+  display: flex;
+  max-width: 400px;
+}
+
 .search-form {
   width: var(--smallWidth);
   margin: 0 auto;
@@ -615,7 +656,20 @@ Form
   background: var(--mainBackground);
   border-radius: var(--mainBorderRadius);
   padding: 0.5rem;
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
+}
+
+.form-control select {
+  display: flex;
+  /* max-width: 400px; */
+  width: 100%;
+  align-items: center;
+  border: none;
+  border-color: transparent;
+  background: var(--mainBackground);
+  border-radius: var(--mainBorderRadius);
+  padding: 0.5rem;
+  /* font-size: 1.2rem; */
 }
 
 /* 
