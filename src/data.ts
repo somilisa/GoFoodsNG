@@ -52,16 +52,16 @@ const cards = [
     imgUrl: card5,
     text: 'Best Fast Food Restaurants Around You',
   },
-  // {
-  //   id: 6,
-  //   imgUrl: card1,
-  //   text: 'Best Pop-Up Restaurants Around You',
-  // },
-  // {
-  //   id: 7,
-  //   imgUrl: card6,
-  //   text: 'Best Ghost Restaurants Around You',
-  // },
+  {
+    id: 6,
+    imgUrl: card1,
+    text: 'Best Pop-Up Restaurants Around You',
+  },
+  {
+    id: 7,
+    imgUrl: card6,
+    text: 'Best Ghost Restaurants Around You',
+  },
 ];
 
 export { data, cards };

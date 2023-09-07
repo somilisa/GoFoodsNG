@@ -1,6 +1,7 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import {Link} from "react-router-dom";
 
 import { cards } from '../data';
 const responsive = {
@@ -35,15 +36,17 @@ const ImageSlider = () => {
       >
         {cards.map(({ imgUrl, id, text }) => {
           return (
-            <div
-              className='group-card'
-              key={id}
-              style={{
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(${imgUrl})`,
-              }}
-            >
-              <p>{text}</p>
-            </div>
+            <Link to='/groups'>
+              <div
+                className='group-card'
+                key={id}
+                style={{
+                  backgroundImage: `linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(${imgUrl})`,
+                }}
+              >
+                <p>{text}</p>
+              </div>
+            </Link>
           );
         })}
       </Carousel>
