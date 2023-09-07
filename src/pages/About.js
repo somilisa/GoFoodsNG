@@ -3,7 +3,7 @@ import Hero from '../components/Hero';
 import bg from '../Assets/about-hero-image.png';
 // import { BsChevronRight, BsChevronLeft } from 'react-icons/bs';
 // import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
-import Slider from '../components/Slider';
+import Slider from '../components/TextSlider';
 
 const About = () => {
   return (
