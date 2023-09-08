@@ -14,7 +14,7 @@ const Home = () => {
         home={true}
       />
       <ImageSlider />
-      <CocktailList title="Featured Restaurant"/>
+      <CocktailList title="Featured Restaurant" className='section-title underline'/>
     </main>
   );
 };

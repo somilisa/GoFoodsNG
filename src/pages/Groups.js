@@ -8,7 +8,10 @@ const Groups = () => {
     <main>
       <Hero imgUrl={bg} title='Find your table' home={true} />
       {/* <ImageSlider /> */}
-      <CocktailList title='Best Local Restaurant Around You' />
+      <CocktailList
+        title='Best Local Restaurant Around You'
+        className='section-title'
+      />
     </main>
   );
 };
