@@ -14,7 +14,7 @@ const Home = () => {
         home={true}
       />
       <ImageSlider />
-      <CocktailList />
+      <CocktailList title="Featured Restaurant"/>
     </main>
   );
 };
