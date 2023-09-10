@@ -1,14 +1,25 @@
 import React from 'react';
-import SearchForm from '../components/SearchForm';
+import SearchForm from './SearchForm';
 
+import { Filterkeys } from '../types';
 
 interface HeroBannerProps {
   imgUrl: string;
   title: string;
   description: string;
-  home:Boolean;
+  home: Boolean;
+  filters: { [T in Filterkeys]: string };
+  setFilters: Function;
 }
-const Hero = ({ imgUrl, title, description, home }: HeroBannerProps) => {
+
+const Hero = ({
+  imgUrl,
+  title,
+  description,
+  home,
+  filters,
+  setFilters,
+}: HeroBannerProps) => {
   return (
     <section>
       <div
@@ -20,7 +31,7 @@ const Hero = ({ imgUrl, title, description, home }: HeroBannerProps) => {
         <div className='hero-text'>
           <h3>{title}</h3>
           <p>{description}</p>
-          {home && <SearchForm />}
+          {home && <SearchForm filters={filters} setFilters={setFilters} />}
         </div>
       </div>
     </section>

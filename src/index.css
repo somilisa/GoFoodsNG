@@ -538,6 +538,9 @@ Cocktails List
   width: var(--smallWidth);
   max-width: var(--fullWidth);
   margin: 50px auto 45px;
+}
+
+.underline {
   padding-bottom: 25px;
   border-bottom: 2px solid #E5E5E5;
 }
@@ -634,6 +637,7 @@ form {
   border-radius: 6px;
   border: transparent;
   background: #BA2E36;
+  color: var(--mainWhite);
   padding: 0 5px;
 }
 
@@ -680,7 +684,7 @@ form {
 
 .form-control input {
   width: 100%;
-  border: none;
+  outline: none;
   border-color: transparent;
   background: var(--mainBackground);
   border-radius: var(--mainBorderRadius);
@@ -693,9 +697,10 @@ form {
   /* max-width: 400px; */
   width: 100%;
   align-items: center;
-  border: none;
+  outline: none;
   border-color: transparent;
   background: var(--mainBackground);
+  color: #929292;
   border-radius: var(--mainBorderRadius);
   padding: 0.5rem;
   /* font-size: 1.2rem; */

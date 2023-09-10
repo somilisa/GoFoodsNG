@@ -6,7 +6,7 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
-  const [searchRestaurant, setSearchRestaurant] = useState('a');
+  const [searchRestaurant, setSearchRestaurant] = useState('');
   const [searchState, setSearchState] = useState('');
   const [searchLGA, setSearchLGA] = useState('');
   const [restaurants, setRestaurants] = useState([]);
@@ -47,6 +47,8 @@ const AppProvider = ({ children }) => {
   useEffect(() => {
     fetchDrinks();
   }, [searchRestaurant, fetchDrinks]);
+
+  
 
   return (
     <AppContext.Provider

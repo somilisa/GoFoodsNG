@@ -1,14 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Cocktail from './Cocktail';
 import Loading from './Loading';
-import { useGlobalContext } from '../context';
 
-const CocktailList = ({title}) => {
-  const { restaurants, loading } = useGlobalContext();
+const CocktailList = ({ title, className, loading, data = [] }) => {
   if (loading) {
     return <Loading />;
   }
-  if (restaurants.length < 1) {
+  if (data.length < 1) {
     return (
       <h2 className='section-title'>
         {' '}
@@ -18,11 +16,11 @@ const CocktailList = ({title}) => {
   }
   return (
     <section>
-      <div className='section-title'>
+      <div className={className}>
         <p>{title}</p>
       </div>
       <div className='cocktails-center'>
-        {restaurants.map((restaurant) => {
+        {data.map((restaurant) => {
           return <Cocktail key={restaurant.id} {...restaurant} />;
         })}
       </div>

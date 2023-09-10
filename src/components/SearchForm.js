@@ -3,16 +3,10 @@ import { useGlobalContext } from '../context';
 import { BiSearch } from 'react-icons/bi';
 import { data } from '../data';
 
-const SearchForm = () => {
+const SearchForm = ({ filters, setFilters }) => {
+  // fetching states
   const stateUrl = 'https://restaurants.bsite.net/api/StatesWithLGA';
-  const {
-    setSearchRestaurant,
-    searchState,
-    setSearchState,
-    searchLGA,
-    setSearchLGA,
-    searchRestuarant,
-  } = useGlobalContext();
+
   const [states, setStates] = useState([]);
 
   const fetchStates = async () => {
@@ -29,11 +23,15 @@ const SearchForm = () => {
     fetchStates();
   });
 
-  let LGA;
+  // let LGA;
 
   return (
     <section>
-      <form>
+      <form
+        onSubmit={(event) => {
+          event.preventDefault();
+        }}
+      >
         <div className='form-control'>
           <button>
             <BiSearch className='search-icon' />
@@ -43,16 +41,20 @@ const SearchForm = () => {
             name='name'
             id='name'
             placeholder='Name of Restaurant,Cuisine'
-            value={searchRestuarant}
-            // onChange={searchCocktail}
+            value={filters.name}
+            onChange={(event) => {
+              event.preventDefault();
+              setFilters((prev) => ({ ...prev, name: event.target.value }));
+            }}
           />
         </div>
 
         <div className='form-control'>
           <select
-            value={searchState}
+            value={filters.state}
             onChange={(event) => {
-              setSearchState(event.target.value);
+              event.preventDefault();
+              setFilters((prev) => ({ ...prev, state: event.target.value }));
             }}
           >
             <option value=''>State</option>
@@ -66,9 +68,10 @@ const SearchForm = () => {
           <select
             name='state'
             id='state'
-            value={setSearchLGA}
+            value={filters.lga}
             onChange={(event) => {
-              setSearchLGA(event.target.value);
+              event.preventDefault();
+              setFilters((prev) => ({ ...prev, lga: event.target.value }));
             }}
           >
             <option value=''>LG Area</option>
