@@ -35,6 +35,7 @@ const AppProvider = ({ children }) => {
           }
         );
         setRestaurants(newRestaurants);
+        console.log(url);
       } else {
         setRestaurants([]);
       }
@@ -48,8 +49,6 @@ const AppProvider = ({ children }) => {
     fetchDrinks();
   }, [searchRestaurant, fetchDrinks]);
 
-  
-
   return (
     <AppContext.Provider
       value={{
@@ -62,6 +61,7 @@ const AppProvider = ({ children }) => {
         setSearchLGA,
         restaurants,
         setRestaurants,
+        setLoading,
       }}
     >
       {children}

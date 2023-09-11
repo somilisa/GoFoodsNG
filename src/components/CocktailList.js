@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Cocktail from './Cocktail';
 import Loading from './Loading';
 
@@ -6,6 +6,7 @@ const CocktailList = ({ title, className, loading, data = [] }) => {
   if (loading) {
     return <Loading />;
   }
+
   if (data.length < 1) {
     return (
       <h2 className='section-title'>

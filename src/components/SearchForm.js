@@ -21,7 +21,9 @@ const SearchForm = ({ filters, setFilters }) => {
 
   useEffect(() => {
     fetchStates();
-  });
+  }, []);
+
+  console.log(filters);
 
   // let LGA;
 
@@ -41,25 +43,25 @@ const SearchForm = ({ filters, setFilters }) => {
             name='name'
             id='name'
             placeholder='Name of Restaurant,Cuisine'
-            value={filters.name}
+            value={filters.restaurantName}
             onChange={(event) => {
               event.preventDefault();
-              setFilters((prev) => ({ ...prev, name: event.target.value }));
+              setFilters((prev) => ({ ...prev, restaurantName: event.target.value }));
             }}
           />
         </div>
 
         <div className='form-control'>
           <select
-            value={filters.state}
+            value={filters.stateId}
             onChange={(event) => {
               event.preventDefault();
-              setFilters((prev) => ({ ...prev, state: event.target.value }));
+              setFilters((prev) => ({ ...prev, stateId: event.target.value }));
             }}
           >
             <option value=''>State</option>
             {states.map(({ stateId, name }) => (
-              <option key={stateId}>{name}</option>
+              <option key={stateId} value={stateId}>{name}</option>
             ))}
           </select>
         </div>
@@ -73,6 +75,7 @@ const SearchForm = ({ filters, setFilters }) => {
               event.preventDefault();
               setFilters((prev) => ({ ...prev, lga: event.target.value }));
             }}
+            disabled
           >
             <option value=''>LG Area</option>
             {/* {LGA.map((stateId, name, localGovernments) => {

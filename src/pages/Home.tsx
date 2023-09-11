@@ -44,7 +44,7 @@ const Home = () => {
         filters={filters}
         setFilters={setFilters}
       />
-      {/* <ImageSlider /> */}
+      <ImageSlider />
       <CocktailList
         title='Featured Restaurant'
         className='section-title underline'
